@@ -3,8 +3,8 @@ body{
     padding: 0%;
 }
 
-/* HESDER */
-/* TOPO DO SITE */
+/* ########################## HESDER ########################## */
+/* ########################## TOPO DO SITE ########################## */
 body .topo{
     display: flex;
     justify-content: flex-end;
@@ -16,17 +16,16 @@ body .topo{
     height: 30px;
 }
 
-/* LOGO */
+/* ########################## LOGO ########################## */
 .topo .logo{
     border: 1px solid #000;
     width: 60px;
     height: 60px;
     text-align: center;
     /* justify-content: center; */
-    
 }   
 
-/* BOTÃO LOGIN E MENU */
+/* ########################## BOTÃO LOGIN E MENU ########################## */
 
 .topo-rigth{
     width: 95%;
@@ -34,24 +33,32 @@ body .topo{
     justify-content: flex-end;
 }
 
-/* BOTÃO MENU */
+/* ########################## BOTÃO MENU ########################## */
 .B_login{
     padding: 10px;
 }
 
-/* BOTÃO LOGIN */
+.B_login img{
+    width: 30px;
+}
+
+/* ########################## BOTÃO LOGIN ########################## */
 .B_menu{
     padding: 10px;
 }
 
-/* AREA INPUT */
+.B_menu img{
+    width: 30px;
+}
+
+/* ########################## AREA INPUT ########################## */
 
 .input{
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-/* INPUT */
+/* ########################## INPUT ########################## */
 
 .input #search{
     border-style: none;
@@ -59,7 +66,58 @@ body .topo{
     font-size: 1rem;
 }
 
-/* FERRAMENTAS */
+.input div img{
+    width: 20px;
+}
+
+/* ########################## AREA DO MAIN ########################## */
+
+.content{
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* border: 1px solid #000; */
+}
+
+
+.cont_label{
+    background-color: rgb(216, 216, 216);
+    border-top-left-radius:5px;
+    border-top-right-radius:5px; 
+    padding: 8px;
+
+}
+
+
+.cont_style{}
+
+.cont_lan{
+    margin-bottom: 10px;
+    
+}
+
+.cont_procu{
+    margin-bottom: 10px;
+}
+
+.cont_Mclas{
+    
+}
+
+
+/* ########################## CARROCEL ########################## */
+.carrocel{
+    border: 1px solid rgb(216, 216, 216);
+
+}
+
+/* ########################## AREA DO FOOTER ########################## */
+
+footer div{
+    border: 1px solid rgb(212, 212, 212);
+    height: 50px;
+}
+/* ########################## FERRAMENTAS ########################## */
 
 .cent_all{
     display: flex;
@@ -67,6 +125,4 @@ body .topo{
     align-items: center
 }
 
-.content{
-    
-}
+
