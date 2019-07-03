@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="\css\Style.css">
     <title>Pondera Book</title>
+    <!-- SITE DOS ICONES -->
+    <!-- https://www.flaticon.com/free-icon/magnifying-glass_126474#term=search&page=1&position=3 -->
 
 </head>
 <body>
@@ -16,35 +18,33 @@
             
                 <div class="logo cent_all">
                     <a href="#">
-                        logo
+                        <img src="/img/PBook.png" alt="logo">
+                        
                     </a>
                 </div> 
             
             <div class="topo-rigth">
                 <!-- BOTÃO DE LOGIN -->
                 <div class="B_login cent_all">
-                    <a href="#">
-                        login
+                    <a href="#" class="cent_all">
+                        <img src="/img/avatar.svg">
                     </a>
                 </div>
                 <!-- BOTÃO DE MENU -->
                 <div class="B_menu cent_all">
-                    <a href="#">
-                        menu
-                    </a>
+                        <img src="/img/notebook.svg">
+                    
                 </div>
             </div>    
         </div>
-        
-        </div>
-        <!-- MENU DE MOBILE -->
-        <div class="mob_menu"></div>
 
         <!-- CAMPO DE PESQUISA -->
         <div class="input cent_all">
             <input type="text" id="search">
-            <button type="button" id="B_search"></button>
-        
+            <div class="cent_all"><img src="/img/pesq.svg"></div>
+        </div>
+        <!-- MENU DE MOBILE -->
+        <div class="mob_menu"></div>
 
     </header>
     
@@ -54,23 +54,37 @@
             
             <!-- NOVOS LANÇAMENTOS -->
             <div class="cont_lan">
-                <h5>Lançamentos</h5>
+                <div class="cont_label">Lançamentos</div>
                 <!-- CARROCEL -->
-
+                <div class="carrocel">
+                    <ul>
+                        Conteudo gerado .json
+                    </ul>
+                </div>    
             </div>
 
             <!-- MAIS PROCURADOS -->
-            <div class="cont_procu">
-                <h5>Mais procurados</h5>
+            <div class="cont_procu cont_style">
+                <div class="cont_label">Mais procurados</div>
                 <!-- CARROCEL -->
+                <div class="carrocel">
+                    <ul>
+                        Conteudo gerado .json
+                    </ul>
+                </div>
 
             </div>
 
             <!-- MELHOR CLASSIFICAÇÃO -->
-            <div class="cont_clasfi">
-                <h5>melhor classificação</h5>
+            <div class="cont_Mclas cont_style">
+                <div class="cont_label" >melhor classificação</div>
                 <!-- CARROCEL -->
-                
+                <div class="carrocel">
+                    <ul>
+                        Conteudo gerado .json
+                    </ul>
+                </div>
+                    
             </div>
 
         </div>
@@ -78,7 +92,7 @@
 
     <!-- RODAPÉ DO SITE-->
     <footer>
-        <div>
+        <div class="cent_all">
             sobre o site!
         </div>
     </footer>
