@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href=".\css\Style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href=".\css\style.css">
     <title>Pondera Book</title>
     <!-- SITE DOS ICONES -->
     <!-- https://www.flaticon.com/free-icon/magnifying-glass_126474#term=search&page=1&position=3 -->
 
 </head>
 <body>
-    <!-- TOPO DO SITE -->
-    <header>
+    <!-- TOPO DO SITE -->     
+    <header>       
         <div class="topo">
             <!-- LOGO -->
             
@@ -32,16 +33,15 @@
                 </div>
                 <!-- BOTÃO DE MENU -->
                 <div class="B_menu cent_all">
-                        <img src="./img/notebook.svg">
-                    
+                    <img src="./img/notebook.svg">                    
                 </div>
             </div>    
         </div>
 
         <!-- CAMPO DE PESQUISA -->
         <div class="input cent_all">
-            <input type="text" id="search">
-            <div class="cent_all"><img src="./img/pesq.svg"></div>
+            <input type="text" id="search" placeholder="Titulo">
+            <div class="cent_all" id="button"><img src="./img/pesq.svg"></div>
         </div>
         <!-- MENU DE MOBILE -->
         <div class="mob_menu"></div>
@@ -49,9 +49,33 @@
     </header>
     
     <!-- CONTEUDO -->
+   
     <main>
-        <div class="content">
-            
+
+        <!-- CASO ATIVE O BOTÃO DE LOGIN-->
+        <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close">
+                    +
+                </div>
+                <div class="headerbox"><h2>Acesse sua Conta</h2></div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Endereço de Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********">
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1">Me manter conectado</label>
+                </div>
+                <div><button type="button" class="btn btn-primary">Enviar</button></div>
+            </div>
+        </div>
+
+
+
+        <div class="content" id="cont" >            
             <!-- NOVOS LANÇAMENTOS -->
             <div class="cont_lan">
                 <div class="cont_label">Lançamentos</div>
@@ -96,5 +120,7 @@
             sobre o site!
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
