@@ -1,6 +1,25 @@
+
+/* ########################## FERRAMENTAS ########################## */
+
+.cent_all{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf')
+}
+@font-face{
+    font-family: 'Kaushan Script';
+    src: url('../fonts/KaushanScript-Regular.ttf')
+}
+
 body{
     margin: 0%;
-    padding: 0%;
+    padding: 0%; 
 }
 
 /* ########################## HESDER ########################## */
@@ -13,7 +32,7 @@ body .topo{
     margin: 0px;
     padding: 10px;
     background: rgb(99, 238, 196);
-    height: 30px;
+    height: 50px;
 }
 
 /* ########################## LOGO ########################## */
@@ -22,7 +41,7 @@ body .topo{
     width: 60px;
     height: 60px;
     text-align: center;
-    /* justify-content: center; */
+    justify-content: center;
 }   
 
 /* ########################## BOTÃO LOGIN E MENU ########################## */
@@ -51,6 +70,84 @@ body .topo{
     width: 30px;
 }
 
+/* ########################## pop-up do menu de login ########################## */
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0px; /* para sobrepor o header */
+    justify-content: center;
+    align-items: center;  
+    display: none;
+    animation-name: modal;
+    animation-duration: 1s;
+}
+
+@keyframes modal{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.modal-content{
+    width: 300px;
+    height: 360px;
+    background-color: #FFFF;
+    border-radius: 2%;
+    position: relative;
+}
+
+.headerbox{
+    margin: 28px 0px 25px 0px;
+    background-color: #7fbdff;
+    border-top: 2px solid #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.close{
+    position: absolute;
+    color: #007bff;
+    opacity: 1;
+    font-size: 25px;
+    right: 6px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.headerbox h2{
+    font-family:'Kaushan Script';
+    padding: 3%;
+    text-align: center;
+    color: #515778;
+    text-shadow: 2px -1px 0px #b9dadb;    
+}
+
+.modal-content label{
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+.modal-content input{
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-content button{
+    display: block;
+    background-color: #7fbdff;
+    width: 35%;
+    margin: 15px auto 0 23px;
+}
+.modal-content .custom-control{
+    padding-left: 40px;
+}
+
 /* ########################## AREA INPUT ########################## */
 
 .input{
@@ -76,7 +173,6 @@ body .topo{
     padding: 10%;
     padding-top: 5%;
     padding-bottom: 5%;
-    /* border: 1px solid #000; */
 }
 
 
@@ -100,9 +196,7 @@ body .topo{
     margin-bottom: 10px;
 }
 
-.cont_Mclas{
-    
-}
+.cont_Mclas{}
 
 
 /* ########################## CARROCEL ########################## */
@@ -111,18 +205,46 @@ body .topo{
 
 }
 
+/* ########################## AREA DO RESULTADO DA PESQUISA ########################## */
+
+.cont_pesq{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_book{
+    flex-flow:column ;
+    justify-content: flex-start;
+    border: 1px solid #0000006b;
+    border-radius: 3px;
+    width: 140px;
+    height:240px;
+    margin: 5px;
+    padding: 10px;
+}
+.thumbnail img{
+    width: 80%;
+    height: auto;
+
+}
+
+.label_pesq{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    height: 80px;
+}
+
+.pesq_title{
+    size
+}
+
 /* ########################## AREA DO FOOTER ########################## */
 
 footer div{
     border: 1px solid rgb(212, 212, 212);
     height: 50px;
 }
-/* ########################## FERRAMENTAS ########################## */
 
-.cent_all{
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
 
 
