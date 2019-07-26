@@ -1,0 +1,186 @@
+.cent_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* CONTEUDO DO MAIN */
+.content{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #000;
+    margin: 3%;
+    border-radius: 2px;
+}
+
+.cont_book{
+    display: flex;
+    flex-flow: column;
+    /* border: 1px solid #000; */
+    width: auto;
+    /* margin: 2px; */
+
+}
+
+/* LADO A */
+
+.book_a{
+    display: flex;
+    /* border: 1px solid #000; */
+    /* margin: 2px;   */
+    width: auto;
+    
+}
+/* CAPA */
+.book_a1{
+    border: 1px solid #000;
+    margin: 2px;  
+    padding: 2%;
+    width: 100%;
+    height: auto;
+}
+
+.book_a1 img{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+/* SINOPSE */
+
+.book_a2{
+    border: 1px solid #000;
+    margin: 2px;  
+    padding: 2%;
+    width: auto;
+    width: 100%;
+    
+    
+}
+
+/* LADO B */
+
+.book_b{
+    /* border: 1px solid #000;
+    margin: 2px; */
+    display: flex;
+}
+
+.book_b1{
+    border: 1px solid #000;
+    margin: 2px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom:0px; 
+    display: flex;
+}
+
+/* DADOS DO LIVRO */
+
+.book_b1 ul{
+    padding-left:5px ;
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    list-style-type: none;
+}
+
+.bdata li{
+    margin-top: 5px;
+    font-size: 14px
+}
+
+/* AVALIAÇÃO */
+
+.book_b2{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+/* REALACIONADOS */
+
+.cont_relaci{
+    border: 1px solid #000;
+    width:auto;
+    margin: 5px;  
+    
+}
+
+.carrocel{
+    overflow: hidden;
+}
+
+.carrocel .list_re{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    padding-left: 0%;
+    margin: 0px;
+    height:250px;
+}
+
+.list_re li{
+    display:flex;
+    flex-flow: column;
+    border: 1px solid rgba(0, 0, 0, 0.200);
+    border-radius: 5px;
+    margin: 5px;
+    
+}
+
+.list_re img{
+    width: 100px;
+    margin: 10px;
+}
+
+.list_re .titleB{
+    /* border: 1px solid #000; */
+    background: rgb(200, 200, 200);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 100%;
+    width: 122px;
+
+}
+
+/* COMENTARIOS */
+
+.coment{
+    /* border: 1px solid #000; */
+    width:auto;
+    /* margin: 2px;   */
+    
+}
+
+/* USUARIO */
+
+.come_a{
+    border: 1px solid #000;
+    width:auto;
+    margin: 2px;
+    padding: 10px;
+}
+
+.come_a .usu{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.usu .img_usu{
+    border: 1px solid #000;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    
+}
+
+/* OUTROS USUARIOS */
+
+.come_b{
+    border: 1px solid #000;
+    width:auto;
+    margin: 2px;  
+}

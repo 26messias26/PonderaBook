@@ -20,22 +20,26 @@
 body{
     margin: 0%;
     padding: 0%; 
+    background-image: url('/img/bg.jpg');
+    background-size: 90vh; 
+
 }
 
-/* ########################## HESDER ########################## */
 /* ########################## TOPO DO SITE ########################## */
+
 body .topo{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: auto;
     margin: 0px;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
     background: rgb(99, 238, 196);
     height: 50px;
 }
 
 /* ########################## LOGO ########################## */
+
 .topo .logo{
     border: 1px solid #000;
     width: 60px;
@@ -53,23 +57,207 @@ body .topo{
 }
 
 /* ########################## BOTÃO MENU ########################## */
-.B_login{
-    padding: 10px;
+
+.head_b{
+    display: none;
 }
 
-.B_login img{
-    width: 30px;
+/* ------------------ botão conta -------------------- */
+
+.b_account{
+    font-family: 'Open Sans';
+    background-color: rgb(99, 238, 196);
+    transition: background 0.3s;    
+}
+.b_account a{
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 0px; 
+    color: #000;
+    text-decoration: none;
+}
+.b_account img{
+    width: 35px;
+    padding-right: 8px; 
+}
+.b_account:hover{
+    background-color: rgba(7, 71, 26, 0.5);
+}
+.b_account:hover .acc_spn{
+    display: flex;
+}
+.acc_spn{
+    font-weight: 600;
+    display: none;
 }
 
-/* ########################## BOTÃO LOGIN ########################## */
+/* --------------------------------------------------- */
+/* ------------------- botao login ------------------- */
+
+.b_login{
+    padding: 0px;
+}
+.b_login a{
+    height: 50px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 10px;
+    background-color: rgb(99, 238, 196);
+    transition: background 0.3s;
+}
+.b_login img{
+    width: 24px;
+}
+
+.b_login a:hover{
+    background-image: rgba(7, 71, 26, 0.5);
+}
+.b_login a:hover .log_spn{
+    display: flex;
+}
+.log_spn{
+    display: none;
+}
+/* --------------------------------------------------- */
+
+.b_logout{
+    font-family: 'Open Sans';
+}
+.b_logout a:hover{
+    background-color:  rgba(7, 71, 26, 0.5);
+}
+.out_spn{
+    display: none;
+}
+.b_logout a:hover .out_spn{
+    display: flex;
+}
+.b_logout a{
+    padding-left: 10px;
+    padding-right: 7px; 
+    text-decoration: none;
+    height: 50px;
+    color: #000;
+    font-weight: 600;
+    background-color: rgb(99, 238, 196);
+    transition: background 0.5s;
+}
+.b_logout img{
+    padding-top: 5px;
+    width: 28px;
+}
+
+/* ----------------- menu responsivo ----------------- */
+
 .B_menu{
-    padding: 10px;
+    padding: 0px;
+    margin-right: 10vw;
+}
+.B_menu ul img{
+    padding-right: 10px;
+    padding-bottom: 10px; 
+    width: 40px;
+}
+.B_menu ul{
+    padding: 0px;
+    list-style-type: none;
+    height: 100%;
+    margin-bottom: 0;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    display: flex;
+    background-color: rgb(99, 238, 196);
+    justify-content: flex-start;
+    transition: background 0.5s;
+}
+.B_menu a{
+    text-decoration: none;
+}
+.B_menu ul li{
+    align-self: center;
+    text-align: center;
+    color: black
+}
+.B_menu ul:hover{
+    background-color: rgba(7, 71, 26, 0.5);
+}
+.B_menu ul:hover #menu_div{
+    display: flex;
 }
 
-.B_menu img{
+.B_menu ul:hover #sec_ul{
+    visibility: visible;    
+}
+.B_menu ul:hover #li_um a span{
+    display: inline;
+}
+.B_menu ul ul{
+    background-color: rgba(7, 71, 26, 0.5);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: 10vw;
+    height: auto;
+    position: absolute;
+}
+#li_um{
+    display: flex;
+    height: 100%;
+    padding-top: 10px;
+}
+#sec_ul{
+    visibility: hidden;
+}
+#sec_ul li{
+    padding: 10px 10px;
+    border-bottom: 2px solid black; 
+}
+#sec_ul li:hover{
+    background-color: rgb(99, 238, 196);
+    transition: background 0.3s;
+}
+#menu_div{
+    display: none;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+#pixel{
+    padding-left: 7px;
+}
+
+/* --------------------------------------------------- */
+/* ---------------- botão de registro ---------------- */
+
+.b_registro{
+    padding: 0px;
+    margin-right: 10vw;
+}
+.b_registro a{
+    height: 50px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 10px;
+    transition: background 0.5s;
+}
+.b_registro a:hover{
+    background-color: rgba(7, 71, 26, 0.5);
+}
+.b_registro a:hover .reg_spn{
+    display: flex;
+}
+.b_registro img{
     width: 30px;
 }
-
+.reg_spn{
+    display: none;
+}
 /* ########################## pop-up do menu de login ########################## */
 
 .bg-modal{
@@ -83,6 +271,54 @@ body .topo{
     display: none;
     animation-name: modal;
     animation-duration: 1s;
+}
+
+.conteudo_logout{
+    width: 350px;
+    height: 190px;
+    background-color: #ffc107;
+    border-radius: 2%;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-areas:
+        "logout_header logout_header"
+        "b_desconecte-me b_continuar";
+    justify-items: center;
+    align-items: center;
+}
+.conteudo_logout h4{
+    grid-area: logout_header;
+}
+
+
+#b_desconecte-me{
+    grid-area: b_desconecte-me;
+    width: 130px;
+    height: 60px;
+    padding: 0px;
+}
+
+#b_continuar{
+    grid-area: b_continuar;
+    width: 130px;
+    height: 60px;
+    padding: 0px;
+}
+
+@media(max-width:400px){
+    .conteudo_logout{
+        width: 80%;
+    }
+
+    #b_desconecte-me{
+        width: 80%;
+    }
+    #b_continuar{
+        width: 80%;
+    }
 }
 
 @keyframes modal{
@@ -104,9 +340,9 @@ body .topo{
 
 .headerbox{
     margin: 28px 0px 25px 0px;
-    background-color: #7fbdff;
-    border-top: 2px solid #007bff;
-    border-bottom: 2px solid #007bff;
+    background-color: rgb(99, 238, 196);
+    border-top: 2px solid rgb(85, 233, 129);
+    border-bottom: 2px solid rgb(85, 233, 129);
 }
 
 .close{
@@ -140,33 +376,61 @@ body .topo{
 
 .modal-content button{
     display: block;
-    background-color: #7fbdff;
+    background-color: rgb(99, 238, 196);
     width: 35%;
     margin: 15px auto 0 23px;
+    border-color: rgb(99, 238, 196); 
 }
+
+.modal-content button:hover{
+    background-color: #44DE70;
+    border-color: #44DE70;
+}
+
 .modal-content .custom-control{
     padding-left: 40px;
 }
 
 /* ########################## AREA INPUT ########################## */
 
-.input{
+.cont_input{
     margin-top: 20px;
     margin-bottom: 30px;
+    
+}
+
+.a_input{
+    border-radius: 30px;
+    background: rgb(202, 202, 202);
+    padding: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+#button{
+    margin-left: 15px;
+
 }
 
 /* ########################## INPUT ########################## */
 
-.input #search{
+.cont_input #search{
+    background: rgba(0, 0, 0, 0);
     border-style: none;
     border-bottom: 1px solid #000; 
     font-size: 1rem;
 }
 
-.input div img{
-    width: 20px;
+#search:focus{
+    border-color: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
+.cont_input div img{
+    width: 20px;
+}
 /* ########################## AREA DO MAIN ########################## */
 
 .content{
@@ -185,24 +449,120 @@ body .topo{
 }
 
 
-.cont_style{}
+.cont_style{
+    margin-bottom: 10px;
+}
 
 .cont_lan{
     margin-bottom: 10px;
-    
 }
 
-.cont_procu{
-    margin-bottom: 10px;
-}
+.cont_procu{}
 
 .cont_Mclas{}
+
+
+
+/* ########################## pop-up do menu de registro ########################## */
+
+.alertas{
+    position: absolute;
+    display: none;
+    align-self: baseline;
+    width: 300px;
+    text-align: center;
+}
+
+#cadastrado{
+    width: 200px;
+    height: 133px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-modal_reg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0px; /* para sobrepor o header */
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation-name: modal;
+    animation-duration: 1s;
+}
+
+
+.modal-content_reg{
+    width: 320px;
+    height: 580px;
+    background-color: #FFFF;
+    border-radius: 2%;
+    position: relative;
+}
+
+.headerbox_reg{
+    margin: 35px 0px 10px 0px;
+}
+
+.close_reg{
+    position: absolute;
+    color: #007bff;
+    opacity: 1;
+    font-size: 25px;
+    right: 9px;
+    top:0px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.modal-content_reg label{
+    width: 94%;
+    display: block;
+    margin: 0 auto;
+}
+.modal-content_reg input{
+    width: 94%;
+    display: block;
+    margin: 5px auto;
+}
+
+.modal-content_reg button{
+    display: block;
+    background-color: rgb(99, 238, 196);
+    margin: 5% auto auto 9.5px;
+    border-color: rgb(99, 238, 196);
+
+}
+
+.modal-content_reg button:hover{
+    background-color: #44DE70;
+    border-color: #44DE70;
+}
+
+.modal-content_reg .custom-control{
+    padding-left: 40px;
+}
+
+#termos{
+    margin-left: 9.5px;
+}
+
+#form_registro{
+    display: flex;
+}
+
+
+
+
 
 
 /* ########################## CARROCEL ########################## */
 .carrocel{
     border: 1px solid rgb(216, 216, 216);
-
+    background: rgb(255, 255, 255);
 }
 
 /* ########################## AREA DO RESULTADO DA PESQUISA ########################## */
@@ -210,12 +570,16 @@ body .topo{
 .cont_pesq{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .card_book{
     flex-flow:column ;
     justify-content: flex-start;
     border: 1px solid #0000006b;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.250);
+    background: rgb(255, 255, 255);
     border-radius: 3px;
     width: 140px;
     height:240px;
@@ -236,7 +600,25 @@ body .topo{
 }
 
 .pesq_title{
-    size
+    width: 115px;
+    height: 30px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+}
+
+.pesq_autor{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    width: 115px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
 }
 
 /* ########################## AREA DO FOOTER ########################## */
@@ -245,6 +627,5 @@ footer div{
     border: 1px solid rgb(212, 212, 212);
     height: 50px;
 }
-
 
 

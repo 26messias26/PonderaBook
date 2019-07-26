@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Pondera Book</title>
+    <!-- SITE DOS ICONES -->
+    <!-- https://www.flaticon.com/free-icon/magnifying-glass_126474#term=search&page=1&position=3 -->
+
+</head>
+<body>
+    <!-- TOPO DO SITE -->     
+    <header>       
+        <div class="topo">
+            <!-- LOGO -->
+            
+             <div class="logo cent_all">
+                <a href="index.html">
+                    <img src="./img/PBook.png" alt="logo">
+                        
+                </a>
+            </div> 
+            
+            <div class="topo-rigth">                
+                <!-- BOTÃO DE LOGIN -->
+                <div class="head_b login b_login">
+                    <a href="#" class="b_login cent_all">
+                        <span class="log_spn">Entrar &nbsp;</span>
+                        <img src="./img/sign-in.svg">  
+                    </a>
+                </div>
+                <!-- BOTÃO DE LOGOUT -->
+                <div class="head_b b_logout cent_all">
+                    <a href="#" class="b_logout cent_all">
+                        <span class="out_spn">Sair &nbsp;</span>
+                        <img src="./img/sign-out.svg">  
+                    </a>
+                </div>
+                <!-- BOTÃO DE CADASTRO -->
+                <div class="head_b b_registro cent_all">
+                    <a href="#" class="cent_all">
+                        <span class="reg_spn">Registro &nbsp;</span>
+                        <img src="./img/registro.svg">
+                    </a>
+                </div>
+                <!-- BOTÃO DE GERENCIAMENTO DA CONTA-->
+                <div class="head_b b_account cent_all">
+                    <a href="#" class="cent_all">
+                        <span class="acc_spn">Conta &nbsp;</span>
+                        <img src="./img/avatar.svg">
+                    </a>
+                </div>
+                <!-- BOTÃO DE MENU -->
+                <div class="head_b B_menu cent_all">
+                    <ul> 
+                        <a href="#" id="pixel">
+                            <li id="li_um">
+                                <div id="menu_div">Menu&nbsp;</div>
+                                <img src="./img/notebook.svg">                        
+                            </li>
+                        </a>
+                        <ul id="sec_ul">
+                            <a href="#"><li>Favoritos</li></a>
+                            <a href="#"><li> Minha Biblioteca</li></a>
+                            <a href="#"><li>Minhas Preferências</li></a>
+                            <a href="#"><li>Meus Ponderamentos</li></a>
+                            <a href="#"><li>Feedback</li></a>
+                        </ul>
+                    </ul>                    
+                </div>                    
+            </div>
+        </div>
+
+        <!-- CAMPO DE PESQUISA -->
+        <div class="cont_input cent_all">
+            <div class="cent_all a_input">
+                <input type="text" id="search" placeholder="Titulo">
+                <div class="cent_all" id="button"><img src="./img/pesq.svg"></div>
+            </div> 
+        </div>
+        <!-- MENU DE MOBILE -->
+        <div class="mob_menu"></div>
+
+    </header>
+    
+    <!-- CONTEUDO -->
+   
+    <main>
+        <!-- CASO ATIVE O BOTÃO DE LOGIN-->
+        <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close">
+                    +
+                </div>
+                <div class="headerbox"><h2>Acesse sua Conta</h2></div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Endereço de Email</label>
+                    <input type="email" class="form-control" id="log_email" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" id="log_pass" placeholder="********">
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1">Me manter conectado</label>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary" id="enviar">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASO ATIVE O BOTÃO DE CADASTRO -->
+        <div class="bg-modal_reg">              
+            <form id="form_registro">
+                <div class="modal-content_reg">
+                    <div class="close_reg">
+                        +
+                    </div>
+                    <div class="headerbox headerbox_reg"><h2>NOVA CONTA</h2></div>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" placeholder="Nome" id="nome">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" class="form-control" placeholder="Sobrenome" id="sobrenome">
+                        <label for="cadastro_email">Endereço de Email</label>
+                        <input type="email" class="form-control" id="cadastro_email" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+                        <label for="exampleInputPassword2">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="********">
+                        <label for="exampleInputPassword3">Confirmação de Senha:</label>
+                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="********">
+                    </div>
+                    <div class="pretty p-svg p-curve" id="termos">
+                        <input type="checkbox" id="check"/>
+                        <div class="state p-success">
+                            <!-- svg path -->
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                                <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label>Aceito os <a href="#">termos e Condições de Uso.</a></label>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" id="cadastrar">Cadastrar-se</button>
+                    </div>
+                </div>
+            </form> 
+
+            <!-- ALERTAS -->
+            <div class="alertas alert alert-success" role="alert" id="cadastrado">
+                <p>O Cadastro foi um sucesso !</p> 
+                <button type="submit" class="btn btn-success" id="fechar_reg">Fechar</button>
+            </div>
+            <div class="alertas alert alert-danger" role="alert" id="termos_cadastro">
+                Você precisa concordar com os termos
+            </div>
+            <div class="alertas alert alert-danger" role="alert" id="alerta_senha_curta">
+                A senha informada precisa ter mais que seis caracteres
+            </div>
+            <div class="alertas alert alert-danger" role="alert" id="alerta_senhas">
+                As senhas inseridas precisam ser iguais
+            </div>
+            <div class="alertas alert alert-danger" role="alert" id="alerta_senha">
+                Informe uma senha
+            </div>
+            <div class="alertas alert alert-warning" role="alert" id="alerta_email">
+                Informe um endereço de email
+            </div>
+            <div class="alertas alert alert-warning" role="alert" id="alerta_sobre">
+                Informe o sobrenome
+            </div>
+            <div class="alertas alert alert-warning" role="alert" id="alerta_nome">
+                Informe um nome
+            </div>
+        </div>
+
+        <!-- JANELA PARA CONFIRMAR O LOGOUT -->
+        <div class="bg-modal" id="janela_logout">
+            <div class="conteudo_logout">
+                <h4>Tem certeza que deseja sair ?</h4>
+                <button type="button" class="btn btn-dark" id="b_desconecte-me">Sim</button>
+                <button type="button" class="btn btn-dark" id="b_continuar">Não</button>
+            </div>    
+        </div>
+
+        <div class="content" id="cont" >            
+            <!-- NOVOS LANÇAMENTOS -->
+            <div class="cont_lan">
+                <div class="cont_label">Lançamentos</div>
+                <!-- CARROCEL -->
+                <div class="carrocel">
+                    <ul>
+                        Conteudo gerado .json
+                    </ul>
+                </div>    
+            </div>
+
+            <!-- MAIS PROCURADOS -->
+            <div class="cont_procu cont_style">
+                <div class="cont_label">Mais procurados</div>
+                <!-- CARROCEL -->
+                <div class="carrocel">
+                    <ul>
+                        Conteudo gerado .json
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- MELHOR CLASSIFICAÇÃO -->
+            <div class="cont_Mclas cont_style">
+                <div class="cont_label" >Melhor classificação</div>
+                <!-- CARROCEL -->
+                <div class="carrocel">
+                    <ul>
+                        Conteudo gerado .json
+                    </ul>
+                </div>                    
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ DO SITE-->
+    <footer>
+        <div class="cent_all">
+            sobre o site!
+        </div>
+    </footer>
+
+    <!------------------------------------ FIREBASE ------------------------------------>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBSkDK_dMySUEtxJDyuvp8wLhiUmTma3Fs",
+        authDomain: "pondera-book.firebaseapp.com",
+        databaseURL: "https://pondera-book.firebaseio.com",
+        projectId: "pondera-book",
+        appId: "1:635996230576:web:6fe39d71c9dcd620"
+    };
+    firebase.initializeApp(firebaseConfig);
+    // referencias a autenticação e banco de dados
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    </script>
+
+    <!---------------------------------- OUTROS SCRIPTS ---------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
