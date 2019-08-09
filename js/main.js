@@ -25,6 +25,7 @@ document.body.addEventListener('keydown', (event) => {
         document.querySelector('#janela_logout').style.display = "none"
         document.querySelector('.bg-modal').style.display = "none"
         document.querySelector('.bg-modal_reg').style.display = "none"
+        document.querySelector('.shadow_bookdata').style.display = "none"
         clean_log_form()
         clean_reg_form()
     }
@@ -154,6 +155,56 @@ window.onload = function(){
 
 
 // -------------- GERAÇÃO DOS LIVROS DA PESQUISA -------------- //
+function idbook(id){
+    $.ajax({
+        url:"https://www.googleapis.com/books/v1/volumes/" + id,
+        dataType:"json",
+        success: function(dado){
+            document.querySelector('.shadow_bookdata').style.display = "flex"
+            document.querySelector('.shadow_bookdata').innerHTML = `
+            <div class="bookdata cent_all">
+                <div class="topobook">
+                    <div class="titulo">${dado.volumeInfo.title}</div>
+                    <div class="closebook">+</div>
+                </div>
+                <div class="cont-b-d">
+                    <div class="bd-a">
+                        <div class="bd-a-capa"><img src="${dado.volumeInfo.imageLinks.thumbnail}"></div>
+                        <div class="bd-a-sinop">${dado.volumeInfo.description}</div>
+                    </div>
+
+                    <div class="bd-b">
+                        <div class="info"></div>
+                        <div class="pond"></div>
+                    </div>
+                </div>
+            <div>
+            
+        `},
+        type:"GET"
+    })
+    
+}
+    
+
+
+// DEF PARA CRIAR OS CARDS
+
+function printcards(data){
+
+    cont.insertAdjacentHTML('beforeend', `
+        <div class="card_book cent_all" id="${data.items[i].id}" onclick="idbook(this.id)" >
+        <div class="thumbnail cent_all">
+        <img src="${data.items[i].volumeInfo.imageLinks.thumbnail}">
+        </div>
+        <div class="label_pesq">
+        <div class="pesq_title">${data.items[i].volumeInfo.title}</div>
+        <div class="pesq_autor ">${data.items[i].volumeInfo.authors}</div>
+        </div>
+        </div>
+            `)
+    }
+
 
 // --- FUNÇÃO DE PESQUISA --- //
 function bookSearch(){
@@ -170,29 +221,37 @@ function bookSearch(){
         // CASO ENCONTRADO, CRIARA O CARD
         success: function(data){
             console.log(data)
-            for(i = 0; i<data.items.length; i++){         
-                cont.insertAdjacentHTML('beforeend', `
-                <div class="card_book cent_all">
-                <div class="thumbnail cent_all">
-                <img src="${data.items[i].volumeInfo.imageLinks.thumbnail}">
-                </div>
-                <div class="label_pesq">
-                <div class="pesq_title">${data.items[i].volumeInfo.title}</div>
-                <div class="pesq_autor ">${data.items[i].volumeInfo.authors}</div>
-                </div>
-                </div>`)
+            for(i = 0; i<data.items.length; i++){
+
+                // DEF GERADOR DE CARDS
+                printcards(data)
             }
         },
         type:'GET'
         // SE NÃO, REPORTARA UM ERRO
         // vou colocar o erro*
     });
+
+    //CHAMA O POP-UP COM DETALHES DO LIVRO AO CLICAR
+    
+
 }
 
-document.getElementById('button').addEventListener('click',bookSearch,false)
+//PESQUISA PELO CLICK DO MOUSE
+document.getElementById('button').addEventListener('click',(event)=>{
+    bookSearch()
+})
+
+//PESQUISA AO PRECIONAR O ENTER
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     if (keyName === 'Enter') {
         bookSearch()
     }
 })
+
+//let dbook = document.querySelector(".card_book")
+//    dbook.addEventListener('click', () => {
+//    document.querySelector('.bg-modal').style.display = "flex"
+ //   })
+

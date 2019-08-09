@@ -41,12 +41,20 @@ body .topo{
 /* ########################## LOGO ########################## */
 
 .topo .logo{
+    position: relative;
+    top: 30px;
+    left: 20px;
     border: 1px solid #000;
     width: 60px;
     height: 60px;
     text-align: center;
     justify-content: center;
 }   
+
+.logo img{
+    display: n  ne;
+    
+}
 
 /* ########################## BOTÃO LOGIN E MENU ########################## */
 
@@ -263,7 +271,7 @@ body .topo{
 .bg-modal{
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 0px; /* para sobrepor o header */
     justify-content: center;
@@ -271,6 +279,7 @@ body .topo{
     display: none;
     animation-name: modal;
     animation-duration: 1s;
+    
 }
 
 .conteudo_logout{
@@ -348,8 +357,9 @@ body .topo{
 .close{
     position: absolute;
     color: #007bff;
+    top:-5px;
     opacity: 1;
-    font-size: 25px;
+    font-size: 40px;
     right: 6px;
     transform: rotate(45deg);
     cursor: pointer;
@@ -484,7 +494,7 @@ body .topo{
 .bg-modal_reg{
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 0px; /* para sobrepor o header */
     justify-content: center;
@@ -511,9 +521,9 @@ body .topo{
     position: absolute;
     color: #007bff;
     opacity: 1;
-    font-size: 25px;
+    font-size: 40px;
     right: 9px;
-    top:0px;
+    top:-10px;
     transform: rotate(45deg);
     cursor: pointer;
 }
@@ -572,6 +582,7 @@ body .topo{
     flex-wrap: wrap;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 30px;
 }
 
 .card_book{
@@ -581,7 +592,7 @@ body .topo{
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.250);
     background: rgb(255, 255, 255);
     border-radius: 3px;
-    width: 140px;
+    width: 180px;
     height:240px;
     margin: 5px;
     padding: 10px;
@@ -597,10 +608,11 @@ body .topo{
     flex-flow: column;
     justify-content: flex-end;
     height: 80px;
+    width: 150px;
 }
 
 .pesq_title{
-    width: 115px;
+    width: 150px;
     height: 30px;
     font-size: 13px;
     white-space: nowrap;
@@ -614,12 +626,124 @@ body .topo{
     text-transform: uppercase;
     font-weight: 700;
 
-    width: 115px;
+    width: 150px;
     height: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
-    direction: ltr;
+    direction: ltr; 
 }
+
+/* ######################### DADOS DO LIVRO SELECIONADO ###################### */
+
+.shadow_bookdata{
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    position: fixed;
+    top: 0px; /* para sobrepor o header */
+    justify-content: center;
+    align-items: center;  
+    display: none;
+    animation-name: modal;
+    animation-duration: 1s;
+
+}
+
+.bookdata{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0px;
+    width:500px ;
+    height: 1000px;
+    position: absolute;
+    overflow: auto;
+}
+
+.topobook{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgb(99, 238, 196);
+    height: 60px;
+    padding: 20px;
+}
+
+.titulo{
+    width: 100%;
+    font-size:20px;
+}
+
+.closebook{
+    color: #007bff;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 100;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+
+
+.cont-b-d{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+  /*border: 1px solid #000;*/
+    margin-bottom:20px ;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.bd-a{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+   /* border: 1px solid #000;*/
+    width: 100%;
+    height: auto;
+}
+
+.bd-a-capa{
+    display: flex;
+    border: 1px solid #000;
+    width: 300px;
+    height: auto;
+    margin: 20px ;
+}
+
+.bd-a-capa img{
+    width: 100%;
+
+}
+
+.bd-a-sinop{
+    display: flex;
+    border: 1px solid #000;
+    width: auto;
+    height: fit-content;
+    margin: 20px ;
+    font-size: 25px;
+}
+
+.bd-b{
+    display: flex;
+    border: 1px solid #000;
+    width: 100%;
+    height: auto;   
+}
+
+.bd-b .info{
+
+}
+.bd-b .pond{
+
+}
+
 
 /* ########################## AREA DO FOOTER ########################## */
 
