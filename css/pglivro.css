@@ -9,7 +9,7 @@
 .content{
     display: flex;
     flex-flow: column;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     margin: 3%;
     border-radius: 2px;
 }
@@ -27,6 +27,7 @@
 
 .book_a{
     display: flex;
+    flex-flow: column;
     /* border: 1px solid #000; */
     /* margin: 2px;   */
     width: auto;
@@ -34,10 +35,10 @@
 }
 /* CAPA */
 .book_a1{
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     margin: 2px;  
     padding: 2%;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -49,13 +50,16 @@
 /* SINOPSE */
 
 .book_a2{
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
+
     margin: 2px;  
     padding: 2%;
     width: auto;
-    width: 100%;
     
-    
+}
+
+.book_a2 div{
+    font-size: 21px
 }
 
 /* LADO B */
@@ -67,7 +71,7 @@
 }
 
 .book_b1{
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     margin: 2px;
     padding: 10px;
     padding-top: 0px;
@@ -93,24 +97,44 @@
 /* AVALIAÇÃO */
 
 .book_b2{
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
     margin: auto;
-    border-radius: 50%;
+    padding: 20px;
+    border-radius: 10px;
     border: 1px solid #000;
+}
+
+.book_b2 .star_label{
+    display: flex;
+}
+
+@media(min-width:760px){
+    .book_a{
+        display: flex;
+        flex-flow: row
+    }
+
+    .book_a1{
+        width:100%;
+    }
+    .book_a2{
+        width:100%;
+    }
 }
 
 /* REALACIONADOS */
 
 .cont_relaci{
-    border: 1px solid #000;
+   /* border: 1px solid #000;*/
     width:auto;
     margin: 5px;  
     
 }
 
 .carrocel{
-    overflow: hidden;
+    overflow-x:scroll;
+    overflow-y: hidden;
 }
 
 .carrocel .list_re{
@@ -176,6 +200,19 @@
     height:50px;
     
 }
+
+.come_a .text_usu{}
+
+.come_a .voto .star{
+    display: flex;
+}
+
+.voto .star i{
+    color:rgb(107, 107, 107);
+}
+
+
+
 
 /* OUTROS USUARIOS */
 

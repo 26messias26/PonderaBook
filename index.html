@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Pondera Book</title>
@@ -12,17 +13,18 @@
     <!-- https://www.flaticon.com/free-icon/magnifying-glass_126474#term=search&page=1&position=3 -->
 
 </head>
-<body>
+
+<body>    
     <!-- TOPO DO SITE -->     
     <header>       
-        <div class="topo"> 
+        <div class="topo">
             <!-- LOGO -->
             
              <div class="logo cent_all">
                 <a href="index.html">
-                    <img src="./img/PBook.png" alt="logo"> 
+                    <img src="./img/PBook.png" alt="logo">
                 </a>
-            </div>  
+            </div> 
             
             <div class="topo-rigth">                
                 <!-- BOTÃO DE LOGIN -->
@@ -32,6 +34,7 @@
                         <img src="./img/sign-in.svg">  
                     </a>
                 </div>
+
                 <!-- BOTÃO DE LOGOUT -->
                 <div class="head_b b_logout cent_all">
                     <a href="#" class="b_logout cent_all">
@@ -39,6 +42,7 @@
                         <img src="./img/sign-out.svg">  
                     </a>
                 </div>
+                
                 <!-- BOTÃO DE CADASTRO -->
                 <div class="head_b b_registro cent_all">
                     <a href="#" class="cent_all">
@@ -46,6 +50,7 @@
                         <img src="./img/registro.svg">
                     </a>
                 </div>
+                
                 <!-- BOTÃO DE GERENCIAMENTO DA CONTA-->
                 <div class="head_b b_account cent_all">
                     <a href="#" class="cent_all">
@@ -53,6 +58,7 @@
                         <img src="./img/avatar.svg">
                     </a>
                 </div>
+
                 <!-- BOTÃO DE MENU -->
                 <div class="head_b B_menu cent_all">
                     <ul> 
@@ -89,6 +95,100 @@
     <!-- CONTEUDO -->
    
     <main>
+        <!-- Menu da conta caso já esteja logado -->
+        <div class="conta">        
+            <img class="user_image" src="./img/PBook.png">
+            <div class="user_info">
+                <span id="header1">Dados</span><br>
+                <div class="basic_info">                
+                    <span class="basic_span">Nome:</span><br>
+                    <span class="basic_span">Sobrenome:</span><br>
+                    <span class="basic_span">Nascimento:</span><br>
+                </div>
+                <div class="json_info">
+                    
+                </div>
+                <div class="botoes1">
+                    <button type="button" class="btn btn-dark btn-sm" id="alter_name">Alterar</button><br>
+                    <button type="button" class="btn btn-dark btn-sm" id="alter_last_name">Alterar</button><br>
+                    <button type="button" class="btn btn-dark btn-sm" id="alter_birth">Alterar</button>
+                </div>
+                <div class="info2">
+                    <span class="basic_span">Email:</span><br>
+                    <span class="basic_span">Telefone</span>
+                </div>
+                <div class="json_info2">
+                    
+                </div>
+                <div class="botoes2">
+
+                </div>
+                <span id="header2">Redes Sociais</span>
+                <button type="button" class="btn btn-outline-success btn-sm botao_rede" id="add_rede">Adicionar</button>
+                <div class="sociais"></div>
+                <div class="botoes3"></div>
+            </div>
+        </div>
+        <div class="online">
+            
+        </div>
+        <!-- JANELAS DE ALTERAÇÃO -->
+        
+        <div class="janelas_alteracao_containter" id="janela_alter_name">
+            <div class="janelas_alteracao">
+                <label for="input_alter_name">Informe o novo nome</label>
+                <div class="close_alter" id="cl_name">
+                    +
+                </div>
+                <input class="form-control" type="text" placeholder="Ex: Adamastor" id="input_alter_name">
+                <button type="button" class="btn btn-outline-danger" id="send_name">Alterar</button>
+            </div>    
+        </div>
+
+        <div class="janelas_alteracao_containter" id="janela_alter_sobrenome">
+            <div class="janelas_alteracao">
+                <label for="input_alter_sobre">Informe o novo sobrenome</label>
+                <div class="close_alter" id="cl_lname">
+                    +
+                </div>
+                <input class="form-control" type="text" placeholder="Ex: de Oliveira" id="input_alter_sobre">
+                <button type="button" class="btn btn-outline-danger" id="send_sobre">Alterar</button>
+            </div>    
+        </div>
+
+        <div class="janelas_alteracao_containter" id="janela_alter_born">
+            <div class="janelas_alteracao">
+                <label for="input_alter_sobre">Data de nascimento</label>
+                <div class="close_alter" id="cl_born">
+                    +
+                </div>
+                <input class="form-control" type="date" value="2019-01-01" id="alter_date" data-date-format="dd/mm/yyyy">
+                <button type="button" class="btn btn-outline-danger" id="send_niver">Alterar</button>
+            </div>    
+        </div>
+
+        <div class="janelas_alteracao_containter" id="janela_alter_phone">
+            <div class="janelas_alteracao">
+                <label for="input_alter_sobre">Número de Telefone</label>
+                <div class="close_alter" id="cl_phone">
+                    +
+                </div>
+                <input class="form-control" type="text" placeholder="Ex: (51)9999-9999" id="input_alter_phone">
+                <button type="button" class="btn btn-outline-danger" id="send_phone">Alterar</button>
+            </div>    
+        </div>
+
+        <div class="janelas_alteracao_containter" id="janela_add_rede">
+            <div class="janelas_alteracao">
+                <label for="input_alter_sobre">Informe o Link</label>
+                <div class="close_alter" id="cl_rede">
+                    +
+                </div>
+                <input class="form-control" type="text" id="input_add_rede">
+                <button type="button" class="btn btn-success" id="enviar_rede">Adicionar</button>
+            </div>    
+        </div>
+
         <!-- CASO ATIVE O BOTÃO DE LOGIN-->
         <div class="bg-modal">
             <div class="modal-content">
@@ -125,6 +225,10 @@
                         <input type="text" class="form-control" placeholder="Nome" id="nome">
                         <label for="sobrenome">Sobrenome:</label>
                         <input type="text" class="form-control" placeholder="Sobrenome" id="sobrenome">
+
+                        <label for="data">Nascimento</label>
+                        <input class="form-control" type="date" value="2019-01-01" id="example-date-input" data-date-format="dd/mm/yyyy">
+                        
                         <label for="cadastro_email">Endereço de Email</label>
                         <input type="email" class="form-control" id="cadastro_email" aria-describedby="emailHelp" placeholder="exemplo@email.com">
                         <label for="exampleInputPassword2">Senha</label>
@@ -176,6 +280,8 @@
             </div>
         </div>
 
+        
+
         <!-- JANELA PARA CONFIRMAR O LOGOUT -->
         <div class="bg-modal" id="janela_logout">
             <div class="conteudo_logout">
@@ -183,7 +289,7 @@
                 <button type="button" class="btn btn-dark" id="b_desconecte-me">Sim</button>
                 <button type="button" class="btn btn-dark" id="b_continuar">Não</button>
             </div>    
-        </div>
+        </div>  
 
         <div class="content" id="cont" >            
             <!-- NOVOS LANÇAMENTOS -->
@@ -191,20 +297,20 @@
                 <div class="cont_label">Lançamentos</div>
                 <!-- CARROCEL -->
                 <div class="carrocel">
-                    <ul>
-                        Conteudo gerado .json
-                    </ul>
+                    <div id="dado_lan" >
+                        
+                    </div>
                 </div>    
             </div>
 
             <!-- MAIS PROCURADOS -->
             <div class="cont_procu cont_style">
-                <div class="cont_label">Mais procurados</div>
+                <div class="cont_label ">Mais procurados</div>
                 <!-- CARROCEL -->
                 <div class="carrocel">
-                    <ul>
-                        Conteudo gerado .json
-                    </ul>
+                    <div id="procu">
+
+                    </div>
                 </div>
 
             </div>
@@ -214,28 +320,25 @@
                 <div class="cont_label" >Melhor classificação</div>
                 <!-- CARROCEL -->
                 <div class="carrocel">
-                    <ul>
-                        Conteudo gerado .json
-                    </ul>
+                    <div id="melhor">
+
+                    </div>
                 </div>                    
             </div>
         </div>
-
         <div class="shadow_bookdata" >
             
         </div>
-
+        
     </main>
 
-
-
     <!-- RODAPÉ DO SITE-->
-    <footer>
+    <!--<footer>
         <div class="cent_all">
             sobre o site!
         </div>
     </footer>
-
+    -->
     <!------------------------------------ FIREBASE ------------------------------------>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
@@ -257,6 +360,7 @@
     <!---------------------------------- OUTROS SCRIPTS ---------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="js/auth.js"></script>
+    <script src="json/json_novo.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

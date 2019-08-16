@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/pglivro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title class="titulo"></title>
+</head>
+<body> 
+    <!-- AREA DO HEADER -->
+    <header>
+
+    </header>
+    <!-- AREA DO MAIN -->
+    <main>
+        <div class="content">
+            <!-- DADOS LIVRO -->
+            <div class="cont_book"> 
+                <!-- LADO A CSS-->
+                <div class="book_a">
+                    <div class="book_a1 cent_all"></div>
+                    <div class="book_a2"></div>
+                </div>
+                <!-- LADO B CSS-->
+                <div class="book_b">
+                    <div class="book_b1"></div>
+                    <div class="book_b2 cent_all">
+                        <div class="nota">
+                            <div class="star_label">
+                                <div ><i class = "material-icons" id="s1" > grade </i></div>
+                                <div ><i class = "material-icons" id="s2" > grade </i></div>
+                                <div ><i class = "material-icons" id="s3" > grade </i></div>
+                                <div ><i class = "material-icons" id="s4" > grade </i></div>
+                                <div ><i class = "material-icons" id="s5" > grade </i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOVROS RELACIONADOS -->
+            </div>
+            <div class="cont_relaci">
+                <div class="carrocel">
+                    <ul class="list_re">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="coment">
+                <div class="come_a">
+                    <div class="usu">
+                        <div class="img_usu cent_all">
+                            <img src="" alt="usu">
+                        </div>
+                        <div class="cent_all">
+                            nome do usu
+                        </div>
+                    </div>
+                    <div class="text_usu"><textarea name="ponderar" id="pond" cols="auto" rows="10"></textarea></div>
+                    <div class="voto">
+                        <p>Classificação<p>
+                        <div class="star">
+                            <div onclick="Avaliar(1)"><i class = "material-icons" id="s1" > grade </i></div>
+                            <div onclick="Avaliar(2)"><i class = "material-icons" id="s2" > grade </i></div>
+                            <div onclick="Avaliar(3)"><i class = "material-icons" id="s3" > grade </i></div>
+                            <div onclick="Avaliar(4)"><i class = "material-icons" id="s4" > grade </i></div>
+                            <div onclick="Avaliar(5)"><i class = "material-icons" id="s5" > grade </i></div>
+                        </div>
+                    </div>
+                    <div class="enviar"><button>Enviar</button></div>
+                </div>
+                <div class="come_b">
+                    vocês ponderam
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- AREA DO FOOTER -->
+    <footer>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="../js/pglivro.js"></script>
+</body>
+</html>
